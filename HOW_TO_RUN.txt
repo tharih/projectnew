@@ -1,0 +1,34 @@
+FaceSense Full Project (Patched with Alerts, Reports, Calendar, Student Auth)
+
+Backend:
+  cd backend
+  python -m venv .venv
+  .\.venv\Scripts\activate
+  pip install -r requirements.txt
+  python -m uvicorn backend.app:app --reload --port 8000
+
+Frontend:
+  cd ../frontend
+  npm install
+  npm run dev
+  (If API runs on a different port, create frontend/.env with:
+   VITE_API_BASE=http://localhost:8000)
+
+Routers to ensure in your FastAPI app file (if not already auto-injected):
+  from backend.routers import settings as settings_router
+  from backend.routers import reports as reports_router
+  from backend.routers import calendar as calendar_router
+  from backend.routers import auth as auth_router
+  app.include_router(settings_router.router)
+  app.include_router(reports_router.router)
+  app.include_router(calendar_router.router)
+  app.include_router(auth_router.router)
+
+Endpoints:
+  Auth: /api/auth/register, /api/auth/login, /api/auth/face/start, /api/auth/face/verify
+  Integrations: /api/settings/integrations (GET/PUT)
+  Reports: /api/reports/payroll?from_iso=...&to_iso=...
+  Calendar: /api/calendar/attendance.ics?from_iso=...&to_iso=...
+
+UI routes:
+  /integrations, /payroll, /calendar-feed, /login, /register, /forgot, /face-login
