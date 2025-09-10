@@ -167,11 +167,7 @@ POST /api/attendance/check
 
 ---
 
-## 📝 License
 
-MIT License — free to use and modify.
-
----
 
 
 
