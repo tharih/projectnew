@@ -110,19 +110,6 @@ Password: admin123
 
 ---
 
-## 📸 Screenshots
-
-### 🔐 Login Page
-
-![Login Page](./screenshots/login.png)
-
-### 👁️ Face Login
-
-![Face Login](./screenshots/face-login.png)
-
-### ➕ Admin Add User
-
-![Admin Add User](./screenshots/admin-add-user.png)
 
 ### 🔔 Admin Integrations
 
