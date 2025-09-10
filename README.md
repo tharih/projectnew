@@ -111,15 +111,7 @@ Password: admin123
 ---
 
 
-### 🔔 Admin Integrations
 
-![Admin Integrations](./screenshots/admin-integrations.png)
-
-### ✅ Slack Alert Example
-
-![Slack Alert](./screenshots/slack-alert.png)
-
----
 
 ## 🔧 API Examples
 
